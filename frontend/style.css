@@ -1,0 +1,504 @@
+
+
+/* =========================
+   Booking Form
+========================= */
+
+.booking-form {
+    max-width: 500px;
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.booking-form input:focus {
+    outline: none;
+    border-color: #16883b;
+}
+
+.booking-form button {
+    margin-top: 5px;
+}
+
+
+/* =========================
+   Booking Cards
+========================= */
+
+.booking-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-card h3 {
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.booking-card button {
+    margin-top: 12px;
+    margin-right: 8px;
+}
+
+
+/* =========================
+   Station Buttons
+========================= */
+
+.view-details {
+    background: #101820;
+    margin-top: 10px;
+}
+
+.book-now {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   Load More Button
+========================= */
+
+#loadMoreBtn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+}
+
+
+/* =========================
+   Better Station Cards
+========================= */
+
+.station-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.station-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   Booking Section
+========================= */
+
+#bookingContainer {
+    min-height: 80px;
+}
+
+
+/* =========================
+   Mobile Improvements
+========================= */
+
+@media(max-width:700px) {
+
+    .booking-form {
+        width: 100%;
+    }
+
+    .booking-card button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8f6;
+    color: #17211b;
+}
+
+/* ================= NAVBAR ================= */
+
+header {
+    background: #071b12;
+    color: white;
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav h1::first-letter {
+    color: #45e98b;
+}
+
+nav div {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #d9eee2;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #45e98b;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 70px 7%;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(53, 232, 132, 0.18), transparent 35%),
+        linear-gradient(135deg, #071b12, #0d3b25);
+    color: white;
+}
+
+.hero > div {
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 58px;
+    margin-bottom: 18px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #cfe4d7;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background: #18a957;
+    color: white;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #0d8844;
+    transform: translateY(-2px);
+}
+
+/* Hero button */
+
+#findStationBtn {
+    padding: 14px 25px;
+    border-radius: 10px;
+    background: #45e98b;
+    color: #062013;
+    font-size: 16px;
+}
+
+#findStationBtn:hover {
+    background: #6ff0a5;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 65px 7%;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* ================= SEARCH ================= */
+
+#stations {
+    background: #f4f8f6;
+}
+
+.search-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.search-box input,
+.search-box select {
+    padding: 14px;
+    border: 1px solid #d5dfd9;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+.search-box input:focus,
+.search-box select:focus {
+    outline: none;
+    border-color: #18a957;
+    box-shadow: 0 0 0 3px rgba(24, 169, 87, 0.1);
+}
+
+/* ================= STATION CARDS ================= */
+
+#stationContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.station-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e1e9e4;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.station-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.station-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #123d26;
+}
+
+.station-card p {
+    margin: 9px 0;
+    color: #65736b;
+    font-size: 14px;
+}
+
+.station-card p:nth-of-type(2) {
+    color: #18a957;
+    font-weight: bold;
+}
+
+/* Station buttons */
+
+.view-details {
+    background: #e9f5ee;
+    color: #13783e;
+    margin-top: 15px;
+}
+
+.view-details:hover {
+    background: #d4ecdd;
+}
+
+.book-now {
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+/* ================= LOAD MORE ================= */
+
+#loadMoreBtn {
+    display: block;
+    margin: 35px auto 0;
+    padding: 13px 30px;
+    background: #071b12;
+}
+
+#loadMoreBtn:hover {
+    background: #123d26;
+}
+
+/* ================= BOOKINGS ================= */
+
+#bookings {
+    background: #eaf2ed;
+}
+
+#bookingContainer {
+    background: transparent;
+    padding: 0;
+}
+
+.booking-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    border-left: 5px solid #18a957;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.booking-card h3 {
+    color: #123d26;
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    margin: 8px 0;
+    color: #5c6962;
+}
+
+.booking-card button {
+    margin-top: 15px;
+    margin-right: 8px;
+}
+
+/* ================= BOOKING FORM ================= */
+
+.booking-form {
+    max-width: 520px;
+    margin-top: 25px;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form h3 {
+    margin-bottom: 22px;
+    color: #123d26;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 13px;
+    border: 1px solid #d5dfd9;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.booking-form input:focus {
+    outline: none;
+    border-color: #18a957;
+    box-shadow: 0 0 0 3px rgba(24, 169, 87, 0.1);
+}
+
+.booking-form button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #071b12;
+    color: #a9c4b4;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    #stationContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav div {
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    #stationContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .station-card {
+        width: 100%;
+    }
+
+    .book-now {
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
